@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; script-src 'self' 'sha256-xH2mcu5pQ/X+diC8rg2Joe4mghK6CAMMzoD2H6qysR8='; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; script-src 'self' 'sha256-xH2mcu5pQ/X+diC8rg2Joe4mghK6CAMMzoD2H6qysR8='; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <title>Tessera — bookmarks you find again by meaning</title>
   <meta name="description" content="A free Chrome and Edge extension: describe what you need and find your bookmarks again by meaning. Related bookmarks for the open page, automatic topics, and everything on your computer.">
@@ -62,13 +62,30 @@
             <span class="btn btn-primary store-btn" aria-disabled="true">Chrome Web Store<small>coming soon</small></span>
             <span class="btn btn-ghost store-btn" aria-disabled="true">Edge Add-ons<small>coming soon</small></span>
           </div>
-          <p class="fineprint">Free · no account · no ads · no telemetry · <a href="guide/">read the guide</a></p>
+          <p class="fineprint">Free · no account · no ads · no telemetry · <a href="#video">watch the video</a> · <a href="guide/">read the guide</a></p>
         </div>
         <div class="hero-shot">
           <figure class="shot m0">
             <img src="../assets/img/en/01-relacionados.png" width="1280" height="800" alt="A Cloudflare page open with Tessera's side panel listing related bookmarks" fetchpriority="high">
           </figure>
         </div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video" aria-labelledby="video-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="video-title">See Tessera in action</h2>
+          <p>Recorded with the real extension: the AI model, the pages and the results are real.</p>
+        </div>
+        <div class="video" data-video="DOut4kBqAAk" data-hl="en" data-title="Tessera intro video">
+          <button class="video-play" type="button" aria-label="Watch the Tessera intro video, with narration and captions">
+            <img src="../assets/img/en/video-poster.jpg" width="1280" height="720" loading="lazy" alt="">
+            <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+            <span class="video-meta">0:37 · narration and captions</span>
+          </button>
+        </div>
+        <p class="video-note">When you click, the video loads from YouTube in privacy-enhanced mode. Nothing is sent before that. <a href="https://youtu.be/DOut4kBqAAk">Watch on YouTube</a></p>
       </div>
     </section>
 

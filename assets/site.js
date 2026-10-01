@@ -201,6 +201,28 @@
     update();
   });
 
+  // ---- vídeo: o player do YouTube (modo de privacidade aprimorada) só é carregado quando a pessoa clica
+  document.querySelectorAll('.video[data-video]').forEach(function (box) {
+    var btn = box.querySelector('.video-play');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var id = box.getAttribute('data-video');
+      var hl = box.getAttribute('data-hl') || 'en';
+      var frame = document.createElement('iframe');
+      frame.src =
+        'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) +
+        '?autoplay=1&rel=0&playsinline=1&cc_load_policy=1&hl=' + encodeURIComponent(hl) +
+        '&cc_lang_pref=' + encodeURIComponent(hl.slice(0, 2));
+      frame.title = box.getAttribute('data-title') || 'YouTube';
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      frame.allowFullscreen = true;
+      // o site não manda referência para outros sites, mas o player do YouTube exige saber de onde vem
+      frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      box.replaceChild(frame, btn);
+      frame.focus();
+    });
+  });
+
   // ---- copiar comandos
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {

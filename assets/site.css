@@ -1042,3 +1042,102 @@ dialog.lightbox .close {
 .center {
   justify-content: center;
 }
+
+/* vídeo: capa local; o player do YouTube só carrega no clique (sem terceiros antes disso) */
+.video-section .section-head {
+  margin-bottom: 26px;
+}
+.video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: calc(var(--radius) + 4px);
+  overflow: hidden;
+  background: #111;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.video-play {
+  all: unset;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.video-play img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.video-play::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(10 10 9 / 0%) 45%, rgb(10 10 9 / 55%));
+}
+.play-badge {
+  position: relative;
+  z-index: 1;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  box-shadow: 0 12px 36px rgb(0 0 0 / 35%), 0 0 0 10px color-mix(in srgb, var(--accent) 25%, transparent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.play-badge svg {
+  width: 38px;
+  height: 38px;
+  fill: currentColor;
+  transform: translateX(3px);
+}
+.video-meta {
+  position: absolute;
+  z-index: 1;
+  left: 20px;
+  bottom: 16px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-shadow: 0 1px 8px rgb(0 0 0 / 50%);
+}
+.video-play:hover img {
+  transform: scale(1.02);
+}
+.video-play:hover .play-badge,
+.video-play:focus-visible .play-badge {
+  transform: scale(1.07);
+  box-shadow: 0 14px 40px rgb(0 0 0 / 40%), 0 0 0 14px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+.video-play:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-note {
+  margin: 12px 0 0;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+@media (max-width: 560px) {
+  .play-badge {
+    width: 68px;
+    height: 68px;
+  }
+  .play-badge svg {
+    width: 28px;
+    height: 28px;
+  }
+}

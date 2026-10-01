@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; script-src 'self' 'sha256-xH2mcu5pQ/X+diC8rg2Joe4mghK6CAMMzoD2H6qysR8='; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; script-src 'self' 'sha256-xH2mcu5pQ/X+diC8rg2Joe4mghK6CAMMzoD2H6qysR8='; frame-src https://www.youtube-nocookie.com; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <title>Tessera — favoritos que você reencontra pelo sentido</title>
   <meta name="description" content="Extensão gratuita para Chrome e Edge: descreva o que precisa e reencontre seus favoritos pelo sentido. Relacionados à página aberta, assuntos automáticos e tudo no seu computador.">
@@ -63,13 +63,30 @@
             <span class="btn btn-primary store-btn" aria-disabled="true">Chrome Web Store<small>em breve</small></span>
             <span class="btn btn-ghost store-btn" aria-disabled="true">Edge Add-ons<small>em breve</small></span>
           </div>
-          <p class="fineprint">Gratuito · sem conta · sem anúncios · sem telemetria · <a href="guia/">ver o guia</a></p>
+          <p class="fineprint">Gratuito · sem conta · sem anúncios · sem telemetria · <a href="#video">assistir ao vídeo</a> · <a href="guia/">ver o guia</a></p>
         </div>
         <div class="hero-shot">
           <figure class="shot m0">
             <img src="assets/img/pt-BR/01-relacionados.png" width="1280" height="800" alt="Página da Cloudflare aberta com o painel lateral do Tessera listando favoritos relacionados" fetchpriority="high">
           </figure>
         </div>
+      </div>
+    </section>
+
+    <section class="section video-section" id="video" aria-labelledby="video-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="video-title">Veja o Tessera em ação</h2>
+          <p>Gravado com a extensão de verdade: o modelo de IA, as páginas e os resultados são reais.</p>
+        </div>
+        <div class="video" data-video="ELk3hmdEfRk" data-hl="pt-BR" data-title="Vídeo de apresentação do Tessera">
+          <button class="video-play" type="button" aria-label="Assistir ao vídeo de apresentação do Tessera, com narração e legendas">
+            <img src="assets/img/pt-BR/video-poster.jpg" width="1280" height="720" loading="lazy" alt="">
+            <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+            <span class="video-meta">0:37 · narração e legendas</span>
+          </button>
+        </div>
+        <p class="video-note">Ao clicar, o vídeo é carregado do YouTube no modo de privacidade aprimorada. Antes disso, nada é enviado. <a href="https://youtu.be/ELk3hmdEfRk">Assistir no YouTube</a></p>
       </div>
     </section>
 
