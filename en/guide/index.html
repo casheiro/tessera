@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; script-src 'self' 'sha256-xH2mcu5pQ/X+diC8rg2Joe4mghK6CAMMzoD2H6qysR8='; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Tessera guide</title>
+  <meta name="description" content="How to use Tessera: getting started, related bookmarks for the open page, search by meaning, topics, appearances, AI with your own key, suggestions, maintenance and troubleshooting.">
+  <link rel="canonical" href="https://casheiro.github.io/tessera/en/guide/">
+  <link rel="alternate" hreflang="pt-BR" href="https://casheiro.github.io/tessera/guia/">
+  <link rel="alternate" hreflang="en" href="https://casheiro.github.io/tessera/en/guide/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tessera guide">
+  <meta property="og:description" content="Everything Tessera does, screen by screen.">
+  <meta property="og:image" content="https://casheiro.github.io/tessera/assets/img/en/og.png">
+  <meta name="theme-color" content="#f6f4ef">
+  <link rel="icon" href="../../assets/img/tessera.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="../../assets/site.css">
+  <script>try{var t=localStorage.getItem('tessera-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+  <script src="../../assets/site.js" defer></script>
+</head>
+<body>
+  <div class="read-bar" aria-hidden="true"></div>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../" aria-label="Tessera, home"><img src="../../assets/img/tessera.svg" alt="" width="28" height="28">tessera</a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="../#features">Features</a>
+        <a href="./" aria-current="page">Guide</a>
+        <a href="../privacy/">Privacy</a>
+        <a href="../#faq">FAQ</a>
+      </nav>
+      <div class="tools">
+        <a class="chip" href="../../guia/" hreflang="pt-BR" lang="pt-BR" aria-label="Versão em português">PT</a>
+        <button class="chip" type="button" data-theme-toggle aria-label="Dark theme">
+          <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg data-icon="sun" hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="chip menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="wrap doc-hero">
+      <p class="eyebrow">every link, a piece of the mosaic</p>
+      <h1>Tessera guide</h1>
+      <p>Tessera keeps the pages you save and lets you find them again by <strong>meaning</strong>: you describe what you
+        need and it finds it, even when the words are different or in another language. Everything runs on your computer —
+        the AI model, your bookmarks and the page text.</p>
+    </div>
+
+    <div class="wrap doc-layout">
+      <aside class="toc">
+        <details>
+          <summary>In this guide</summary>
+          <ol>
+            <li><a href="#getting-started">1. Getting started</a></li>
+            <li><a href="#related">2. Related to the open page</a></li>
+            <li><a href="#search">3. Search by describing</a></li>
+            <li><a href="#topics">4. Topics</a></li>
+            <li><a href="#appearances">5. Appearances</a></li>
+            <li><a href="#ai">6. AI with your own key</a></li>
+            <li><a href="#suggestions">7. Suggestions and history</a></li>
+            <li><a href="#maintenance">8. Maintenance</a></li>
+            <li><a href="#privacy">9. Privacy in one minute</a></li>
+            <li><a href="#troubleshooting">10. Troubleshooting</a></li>
+            <li><a href="#shortcuts">Shortcuts</a></li>
+          </ol>
+        </details>
+      </aside>
+
+      <article class="prose">
+        <section id="getting-started">
+          <h2><span class="n">1</span>Getting started</h2>
+          <p>Tick each step as you go — progress is kept only in this browser.</p>
+          <div class="progress" data-progress="start"><div class="bar"><i></i></div><span>0 of 4 done</span></div>
+          <ul class="checklist" data-checklist="start">
+            <li><label><input type="checkbox"><span><strong>Install the extension</strong> from the Chrome Web Store or
+              Edge Add-ons and pin the mosaic icon to the toolbar.</span></label></li>
+            <li><label><input type="checkbox"><span><strong>Let the AI model download once</strong> (~200 MB) on first
+              launch. With a compatible graphics card it uses EmbeddingGemma; without one, a smaller model that runs on the
+              processor. The panel shows the progress.</span></label></li>
+            <li><label><input type="checkbox"><span><strong>Bring your bookmarks</strong> in <strong>Library →
+              Import</strong>. The browser's tree is never modified. If you allow site access, Tessera reads each page's
+              content to understand what it is about; you can pause and resume anytime.</span></label></li>
+            <li><label><input type="checkbox"><span><strong>Save a page</strong>: <strong>Save this page</strong> in the
+              popup, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>, or right-click → <strong>Save to Tessera</strong> (works on
+              links too).</span></label></li>
+          </ul>
+        </section>
+
+        <section id="related">
+          <h2><span class="n">2</span>Related to the open page</h2>
+          <figure class="shot"><img src="../../assets/img/en/01-relacionados.png" width="1280" height="800" loading="lazy" alt="A Cloudflare page open with Tessera's side panel showing related bookmarks"></figure>
+          <p>Open the <strong>side panel</strong> (Tessera icon → Side panel, or the browser's side menu). Under
+            <strong>Related to this page</strong> you see the bookmarks about the same subject as the open tab — without typing
+            anything. Switch tabs and the list follows.</p>
+          <p>It is search by meaning working for you: while reading a service's docs, you see the guides, alternatives and
+            tutorials you had already saved about it.</p>
+          <div class="callout"><p>To read the open page, Tessera needs site access (<strong>Settings → Privacy → “Allow
+            downloading pages…”</strong>). It reads only to compare with your bookmarks; nothing is sent.</p></div>
+        </section>
+
+        <section id="search">
+          <h2><span class="n">3</span>Search by describing</h2>
+          <figure class="shot"><img src="../../assets/img/en/02-busca-pelo-sentido.png" width="1280" height="800" loading="lazy" alt="Tessera popup searching for a recipe"></figure>
+          <p>Type it the way you remember it: “that cheese bread recipe”, “how to publish a site without a server”, “short
+            home workout”. Results come by meaning, with the matching excerpt highlighted.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Where</th><th scope="col">How</th></tr></thead>
+              <tbody>
+                <tr><td>Popup</td><td>click the icon or <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>; <kbd>↑</kbd> <kbd>↓</kbd> and <kbd>Enter</kbd> to open (<kbd>Alt</kbd>+<kbd>Enter</kbd> opens a new tab)</td></tr>
+                <tr><td>Address bar</td><td>type <kbd>sf</kbd>, a space and your search</td></tr>
+                <tr><td>Side panel</td><td>search field at the top</td></tr>
+                <tr><td>Library</td><td>search at the top, with filters by tag, collection, site, date and topic</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="topics">
+          <h2><span class="n">4</span>Topics</h2>
+          <figure class="shot"><img src="../../assets/img/en/04-assuntos.png" width="1280" height="800" loading="lazy" alt="Topics screen in the Visual appearance"></figure>
+          <p>In <strong>Topics</strong>, Tessera groups your bookmarks by what they have in common. Topics <strong>emerge
+            from your own bookmarks</strong>, with no predefined category list, and their names come from the members
+            themselves.</p>
+          <ul>
+            <li>Click a topic to see its bookmarks in the side panel: <strong>Open all in tabs</strong> or <strong>View in
+              Library</strong>.</li>
+            <li><strong>No topic</strong>: what doesn't fit yet. Each item shows <strong>Looks like: …</strong> when a close
+              topic exists — one click adds it.</li>
+            <li><strong>New topic…</strong>: create your own topic (at the top, from a bookmark without topic, or by selecting
+              several in the Library). It keeps the name you gave it, even when topics are recalculated.</li>
+            <li><strong>Similar</strong>: in each topic's panel, bookmarks from outside that resemble it, ready to add.</li>
+            <li><strong>Recalculate groups</strong> rebuilds topics from everything that is ready and shows the result
+              (before → after).</li>
+          </ul>
+        </section>
+
+        <section id="appearances">
+          <h2><span class="n">5</span>Appearances</h2>
+          <figure class="shot"><img src="../../assets/img/en/05-densa-escura.png" width="1280" height="800" loading="lazy" alt="Library in the Dense appearance, dark mode"></figure>
+          <p>In <strong>Settings → Appearance</strong>: <strong>Calm</strong> (space and reading), <strong>Dense</strong>
+            (many bookmarks per screen) and <strong>Visual</strong> (tiles in the topic color and large icons), each in light,
+            dark or following the system.</p>
+        </section>
+
+        <section id="ai">
+          <h2><span class="n">6</span>AI with your own key <small>(optional)</small></h2>
+          <figure class="shot"><img src="../../assets/img/en/06-servicos-de-ia.png" width="1280" height="800" loading="lazy" alt="AI services card with DeepSeek configured"></figure>
+          <p>With nothing configured, Tessera already organizes and searches with local AI. For richer tags and summaries and
+            <strong>answers based on your bookmarks</strong>, connect a service with your own key:</p>
+          <ol>
+            <li><strong>Settings → AI services → Add service</strong> and pick <strong>Anthropic</strong>,
+              <strong>OpenAI</strong>, <strong>Ollama</strong> (on your computer) or <strong>Compatible</strong> — any service
+              in the OpenAI or Anthropic format (DeepSeek, Groq, OpenRouter, LM Studio…), entering its address.</li>
+            <li>Paste the <strong>key</strong> and click <strong>Load models from the service</strong>: the model fields
+              start suggesting names.</li>
+            <li>Set the <strong>monthly limit</strong> (US$ 5 by default). If the model is not in the price table, enter its
+              price.</li>
+            <li>For each purpose, click <strong>Allow…</strong>: you see the <strong>exact address</strong> and <strong>what
+              will be sent</strong>, and only then authorize. <strong>Revoke</strong> stops immediately, including queued
+              work.</li>
+            <li><strong>Test connection</strong> confirms everything works.</li>
+          </ol>
+          <h3>Which model for what?</h3>
+          <p>To <strong>organize</strong>, a fast and cheap model — it runs once per bookmark (e.g. DeepSeek chat, Claude
+            Haiku, GPT-4o mini). To <strong>answer</strong>, a stronger model, since it has to combine sources and cite
+            correctly. Tessera asks for a direct answer, without reasoning mode, so the limit isn't wasted.</p>
+          <h3>Answer based on my bookmarks</h3>
+          <figure class="shot"><img src="../../assets/img/en/03-resposta-com-citacoes.png" width="1280" height="800" loading="lazy" alt="Library with an answer citing bookmarks"></figure>
+          <p>Search in the Library or the popup and click <strong>Answer based on my bookmarks</strong>. The bookmarks used
+            as sources show up right away; then the answer, with <strong>[1]</strong> citations that open the bookmark.
+            Without enough basis, it says so instead of making things up.</p>
+          <div class="callout"><p>What <strong>never</strong> goes to any service: banking and health sites, domains you
+            blocked, your key (it stays on this computer) and your history.</p></div>
+        </section>
+
+        <section id="suggestions">
+          <h2><span class="n">7</span>Suggestions and history <small>(optional)</small></h2>
+          <figure class="shot"><img src="../../assets/img/en/07-sugestoes.png" width="1280" height="800" loading="lazy" alt="Popup asking “Save this page?”"></figure>
+          <p>In <strong>Settings → Privacy</strong>:</p>
+          <ul>
+            <li><strong>Suggest pages worth saving</strong>: when you return to a page on 3 different days, or read it for
+              more than 3 minutes, a <strong>+</strong> shows on the icon. In the popup: <strong>Save</strong>, <strong>Not
+              now</strong> (one week) or <strong>Never for this site</strong>. Tessera keeps only counters, without the
+              address, for up to 30 days.</li>
+            <li><strong>Include my history in search</strong>: pages visited in the last 90 days show up in search marked as
+              <strong>History</strong>, with <strong>Save</strong> in one click. Only title and address; turning it off
+              deletes everything.</li>
+          </ul>
+        </section>
+
+        <section id="maintenance">
+          <h2><span class="n">8</span>Maintenance</h2>
+          <ul>
+            <li><strong>Broken links</strong>: checks your bookmarks and shows the reason (page gone, domain for sale…). You
+              confirm before anything goes to the trash.</li>
+            <li><strong>Trash</strong>: kept for 30 days; <strong>Empty trash</strong> deletes right away.</li>
+            <li><strong>Export / Import</strong> (Settings → Data): everything as JSON, for backup or to move to another
+              computer.</li>
+            <li><strong>Pause / resume</strong> processing anytime from the progress bar.</li>
+          </ul>
+        </section>
+
+        <section id="privacy">
+          <h2><span class="n">9</span>Privacy in one minute</h2>
+          <ul>
+            <li>Bookmarks, page text, organization and the AI model stay <strong>on your computer</strong>.</li>
+            <li>No account, no server, no ads, no telemetry.</li>
+            <li>The internet is only used to download the pages you saved, download the model once, check links when you ask
+              and — only if you turn them on — the search engine lookup for pages without content and the AI services you
+              configured.</li>
+          </ul>
+          <p><a href="../privacy/">Read the full privacy policy</a></p>
+        </section>
+
+        <section id="troubleshooting">
+          <h2><span class="n">10</span>Troubleshooting</h2>
+          <div class="faq">
+            <details>
+              <summary>“Search by meaning unavailable”</summary>
+              <div><p>In <strong>Settings → Local AI model</strong>, see the reason and click <strong>Try again</strong>.
+                Without a compatible graphics card, choose the light model.</p></div>
+            </details>
+            <details>
+              <summary>Empty related list in the side panel</summary>
+              <div><p>Allow site access (Settings → Privacy). Internal browser pages have no related items.</p></div>
+            </details>
+            <details>
+              <summary>Ollama doesn't connect</summary>
+              <div>
+                <p>Start Ollama allowing extensions and use the address <code>http://localhost:11434/v1</code>.</p>
+                <p>macOS and Linux:</p>
+                <p class="copy-row"><code>OLLAMA_ORIGINS=chrome-extension://* ollama serve</code>
+                  <button class="chip copy" type="button" data-copy="OLLAMA_ORIGINS=chrome-extension://* ollama serve">Copy</button></p>
+                <p>Windows (PowerShell):</p>
+                <p class="copy-row"><code>$env:OLLAMA_ORIGINS="chrome-extension://*"; ollama serve</code>
+                  <button class="chip copy" type="button" data-copy='$env:OLLAMA_ORIGINS="chrome-extension://*"; ollama serve'>Copy</button></p>
+              </div>
+            </details>
+            <details>
+              <summary>“Last failure” on the AI service</summary>
+              <div><p>The message tells the reason (invalid key, no credit, limit, empty answer). Local organization keeps
+                going meanwhile.</p></div>
+            </details>
+            <details>
+              <summary>Import is taking long</summary>
+              <div><p>Normal with hundreds of bookmarks (the AI reads each page). Pause and resume anytime; the bar shows the
+                estimated time.</p></div>
+            </details>
+            <details>
+              <summary>Topics out of date</summary>
+              <div><p>Use <strong>Recalculate groups</strong> on the Topics screen — the result shows right away.</p></div>
+            </details>
+            <details>
+              <summary>None of this helped</summary>
+              <div><p>Open an issue at <a href="https://github.com/casheiro/tessera/issues">github.com/casheiro/tessera/issues</a>
+                with your browser, the Tessera version (in Settings) and what happened. Don't include personal data or your
+                API key.</p></div>
+            </details>
+          </div>
+        </section>
+
+        <section id="shortcuts">
+          <h2>Shortcuts</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr></thead>
+              <tbody>
+                <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></td><td>save the current page</td></tr>
+                <tr><td><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></td><td>open the search popup</td></tr>
+                <tr><td><kbd>sf</kbd> + space (address bar)</td><td>search your bookmarks</td></tr>
+                <tr><td><kbd>↑</kbd> <kbd>↓</kbd> · <kbd>Enter</kbd> · <kbd>Alt</kbd>+<kbd>Enter</kbd></td><td>navigate and open results (new tab with Alt)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Tessera · all rights reserved</span>
+      <nav aria-label="Footer">
+        <a href="./">Guide</a>
+        <a href="../privacy/">Privacy</a>
+        <a href="https://github.com/casheiro/tessera/issues">Support</a>
+        <a href="../../guia/" hreflang="pt-BR" lang="pt-BR">Português</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

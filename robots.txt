@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://casheiro.github.io/tessera/sitemap.xml

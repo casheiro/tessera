@@ -1,0 +1,9 @@
+# o site é só conteúdo: nada de build, pacote ou dependência da extensão
+node_modules/
+dist/
+.output/
+*.zip
+*.crx
+*.map
+.DS_Store
+Thumbs.db

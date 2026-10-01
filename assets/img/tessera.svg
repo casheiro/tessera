@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <title>Tessera</title>
+  <rect x="8" y="8" width="52" height="52" rx="12" fill="#D98C5F"/>
+  <rect x="68" y="8" width="52" height="52" rx="12" fill="#6E9E8A"/>
+  <rect x="8" y="68" width="52" height="52" rx="12" fill="#5B7DB1"/>
+  <rect x="68" y="68" width="52" height="52" rx="12" fill="#C2A14D"/>
+</svg>

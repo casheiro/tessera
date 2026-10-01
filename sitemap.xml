@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://casheiro.github.io/tessera/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://casheiro.github.io/tessera/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casheiro.github.io/tessera/en/"/></url>
+  <url><loc>https://casheiro.github.io/tessera/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://casheiro.github.io/tessera/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casheiro.github.io/tessera/en/"/></url>
+  <url><loc>https://casheiro.github.io/tessera/guia/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://casheiro.github.io/tessera/guia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casheiro.github.io/tessera/en/guide/"/></url>
+  <url><loc>https://casheiro.github.io/tessera/en/guide/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://casheiro.github.io/tessera/guia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casheiro.github.io/tessera/en/guide/"/></url>
+  <url><loc>https://casheiro.github.io/tessera/privacidade/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://casheiro.github.io/tessera/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casheiro.github.io/tessera/en/privacy/"/></url>
+  <url><loc>https://casheiro.github.io/tessera/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://casheiro.github.io/tessera/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casheiro.github.io/tessera/en/privacy/"/></url>
+</urlset>
