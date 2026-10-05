@@ -21,6 +21,7 @@
   <link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="../assets/img/icon-128.png">
   <link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/fraunces-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/site.css">
   <script>try{var t=localStorage.getItem('tessera-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <script src="../assets/site.js" defer></script>
@@ -38,6 +39,7 @@
         <a href="#faq">FAQ</a>
       </nav>
       <div class="tools">
+        <a class="btn btn-primary btn-sm head-cta" href="https://chromewebstore.google.com/detail/chaphnhnfeidmgclakdmckdgfohoochd">Add to Chrome</a>
         <a class="chip" href="../" hreflang="pt-BR" lang="pt-BR" aria-label="Versão em português">PT</a>
         <button class="chip" type="button" data-theme-toggle aria-label="Dark theme">
           <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -51,35 +53,234 @@
   </header>
 
   <main id="content">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">every link, a piece of the mosaic</p>
-          <h1>Bookmarks you find again by meaning</h1>
-          <p class="lede">Describe what you need — “that cheese bread recipe” — and Tessera finds it, even with other words
-            or in another language. While you browse, it shows on its own the bookmarks related to the open page.</p>
-          <div class="cta">
-            <a class="btn btn-primary store-btn" href="https://chromewebstore.google.com/detail/chaphnhnfeidmgclakdmckdgfohoochd">Add to Chrome<small>Chrome Web Store · free</small></a>
-            <span class="btn btn-ghost store-btn" aria-disabled="true">Edge Add-ons<small>coming soon</small></span>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="wordmark" aria-hidden="true"><span class="mark"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i></span>tessera</p>
+        <div class="hero-row">
+          <h1 id="hero-title" class="display"><span class="sr-only">Tessera: </span>Bookmarks you find again by <em>meaning</em>.</h1>
+          <div>
+            <p class="lede">A free Chrome extension. It understands what each page is about and finds the right bookmark, even when you don't remember the title.</p>
+            <div class="cta">
+              <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/chaphnhnfeidmgclakdmckdgfohoochd">Add to Chrome<span class="btn-note">free</span></a>
+              <a class="btn btn-ghost btn-lg" href="#video"><svg class="play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>Watch in 37 s</a>
+            </div>
+            <p class="fineprint">No account · no ads · no telemetry · Edge Add-ons coming soon</p>
           </div>
-          <p class="fineprint">Free · no account · no ads · no telemetry · <a href="#video">watch the video</a> · <a href="guide/">read the guide</a></p>
         </div>
-        <div class="hero-shot">
-          <figure class="shot m0">
-            <img src="../assets/img/en/01-relacionados.png" width="1280" height="800" alt="A Cloudflare page open with Tessera's side panel listing related bookmarks" fetchpriority="high">
-          </figure>
+      </div>
+    </section>
+
+    <section class="pile" id="features" aria-labelledby="pile-title">
+      <h2 id="pile-title" class="sr-only">How it works</h2>
+      <div class="wrap pile-stage">
+        <div class="pile-caps">
+          <div class="cap cap0"><p class="label">01 · Today</p><h3>31 loose bookmarks.</h3><p>Folders you forgot and titles you don't remember. The browser's search only matches word for word.</p></div>
+          <div class="cap cap1"><p class="label">02 · With Tessera</p><h3>Topics appear on their own.</h3><p>The AI model, on your computer, reads each page and groups what means the same. This is the Topics screen, just like in the extension.</p></div>
+          <div class="cap cap2"><p class="label">03 · And search</p><h3>Search the way you remember.</h3><p>“cheese bread recipe from Minas” finds Pão de queijo and Brigadeiro, without you remembering the title.</p></div>
+        </div>
+        <div class="pile-board">
+          <ul class="loose" aria-hidden="true">
+            <li><img src="../assets/img/sites/wikipedia.webp" alt="">Pão de queijo</li>
+            <li><img src="../assets/img/sites/fly.webp" alt="">Fly.io developer documentation</li>
+            <li><img src="../assets/img/sites/wikipedia.webp" alt="">Government bond</li>
+            <li><img src="../assets/img/sites/github.webp" alt="">Understanding GitHub Actions</li>
+            <li><img src="../assets/img/sites/wikipedia.webp" alt="">Chapada Diamantina</li>
+            <li><img src="../assets/img/sites/cloudflare.webp" alt="">Overview · Cloudflare Pages docs</li>
+            <li><img src="../assets/img/sites/wikipedia.webp" alt="">The Name of the Wind</li>
+            <li><img src="../assets/img/sites/ollama.webp" alt="">Ollama</li>
+            <li><img src="../assets/img/sites/wikipedia.webp" alt="">Moqueca</li>
+            <li><img src="../assets/img/sites/vercel.webp" alt="">Deploying to Vercel</li>
+            <li><img src="../assets/img/sites/wikipedia.webp" alt="">Compound interest</li>
+            <li><img src="../assets/img/sites/hashicorp.webp" alt="">What is Terraform</li>
+            <li><img src="../assets/img/sites/wikipedia.webp" alt="">Color theory</li>
+            <li><img src="../assets/img/sites/wikipedia.webp" alt="">Lisbon</li>
+          </ul>
+          <div class="fit fit-topics" data-fit="1280" data-fit-sm="520">
+            <div class="tx tx-visual tx-screen" role="img" aria-label="The extension's Topics screen: seven topics formed from the bookmarks, with Devops · Fly open in the panel">
+              <div class="tx-rail"><span class="tx-mark"><i></i><i></i><i></i><i></i></span><span class="tx-ri"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h16"/></svg></span><span class="tx-ri on"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg></span><span class="tx-ri"><svg viewBox="0 0 24 24"><path d="M9 15l6-6M7 11l-2 2a4 4 0 0 0 6 6l2-2M17 13l2-2a4 4 0 0 0-6-6l-2 2"/></svg></span><span class="tx-ri"><svg viewBox="0 0 24 24"><path d="M5 7h14M10 7V5h4v2M7 7l1 12h8l1-12"/></svg></span><span class="tx-ri tx-gear"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span></div>
+              <div class="tx-main">
+                <div class="tx-head"><div><p class="tx-title">Topics</p><p class="tx-sub">7 topics · 20 bookmarks · 11 outside topics</p></div><div class="tx-acts"><span class="tx-btn">New topic…</span><span class="tx-btn">Recalculate groups</span></div></div>
+                <div class="tx-seg"><span class="on">Largest</span><span>A–Z</span><span>Recent</span></div>
+                <div class="tx-grid">
+                  <div class="tx-topic rose"><span class="tx-icons"><img src="../assets/img/sites/wikipedia.webp" alt=""><img src="../assets/img/sites/wikipedia.webp" alt=""><img src="../assets/img/sites/wikipedia.webp" alt=""><img src="../assets/img/sites/wikipedia.webp" alt=""></span><span class="tx-tname">Culinária brasileira</span><span class="tx-count">4</span></div>
+                  <div class="tx-topic terra sel"><span class="tx-icons"><img src="../assets/img/sites/render.webp" alt=""><img src="../assets/img/sites/fly.webp" alt=""><img src="../assets/img/sites/cloudflare.webp" alt=""><img src="../assets/img/sites/vercel.webp" alt=""></span><span class="tx-tname">Devops · Fly</span><span class="tx-count">4</span></div>
+                  <div class="tx-topic violet"><span class="tx-icons"><img src="../assets/img/sites/wikipedia.webp" alt=""><img src="../assets/img/sites/wikipedia.webp" alt=""><img src="../assets/img/sites/wikipedia.webp" alt=""></span><span class="tx-tname">Crédito e dívidas · Investimentos</span><span class="tx-count">3</span></div>
+                  <div class="tx-topic terra"><span class="tx-icons"><b>H</b><b></b><img src="../assets/img/sites/github.webp" alt=""></span><span class="tx-tname">Devops · GitHub Certifications · Infraestrutura como código</span><span class="tx-count">3</span></div>
+                  <div class="tx-topic sage"><span class="tx-icons"><img src="../assets/img/sites/wikipedia.webp" alt=""><img src="../assets/img/sites/wikipedia.webp" alt=""></span><span class="tx-tname">Design gráfico · Color Theory</span><span class="tx-count">2</span></div>
+                  <div class="tx-topic ochre"><span class="tx-icons"><img src="../assets/img/sites/wikipedia.webp" alt=""><img src="../assets/img/sites/wikipedia.webp" alt=""></span><span class="tx-tname">Dune · Kvothe</span><span class="tx-count">2</span></div>
+                  <div class="tx-topic terra"><span class="tx-icons"><img src="../assets/img/sites/deepseek.webp" alt=""><img src="../assets/img/sites/ollama.webp" alt=""></span><span class="tx-tname">Ferramentas de ia</span><span class="tx-count">2</span></div>
+                </div>
+                <div class="tx-none"><span>No topic</span><span class="tx-count">11</span></div>
+              </div>
+              <div class="tx-panel terra">
+                <p class="tx-kicker"><i></i>4 bookmarks</p>
+                <p class="tx-ptitle">Devops · Fly</p>
+                <p class="tx-chips"><span>Devops</span> <span>Fly</span></p>
+                <p class="tx-acts"><span class="tx-btn tx-primary">Open all in tabs</span><span class="tx-btn">View in Library</span></p>
+                <ul class="tx-cards">
+                  <li><img src="../assets/img/sites/render.webp" alt=""><b>Docs + Quickstarts | Render</b><span>render.com</span><i class="tx-open" aria-hidden="true">↗</i></li>
+                  <li><img src="../assets/img/sites/fly.webp" alt=""><b>Fly.io developer documentation</b><span>docs.fly.io</span><i class="tx-open" aria-hidden="true">↗</i></li>
+                  <li><img src="../assets/img/sites/cloudflare.webp" alt=""><b>Overview · Cloudflare Pages docs</b><span>developers.cloudflare.…</span><i class="tx-open" aria-hidden="true">↗</i></li>
+                  <li><img src="../assets/img/sites/vercel.webp" alt=""><b>Deploying to Vercel</b><span>vercel.com</span><i class="tx-open" aria-hidden="true">↗</i></li>
+                </ul>
+                <p class="tx-psub">Similar</p>
+                <p class="tx-pnote">Bookmarks outside this topic that resemble it.</p>
+                <ul class="tx-cards tx-similar">
+                  <li><img src="../assets/img/sites/kubernetes.webp" alt=""><b>Deployments</b><span>kubernetes.io</span><span class="tx-btn">Add</span></li>
+                  <li><img src="../assets/img/sites/github.webp" alt=""><b>Understanding GitHub Actions</b><span>docs.github.com</span><span class="tx-btn">Add</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="fit fit-pop" data-fit="400">
+            <div class="tx tx-popup" role="img" aria-label="Tessera popup: the search “cheese bread recipe from Minas” finds Pão de queijo and Brigadeiro">
+              <div class="tx-pophead"><span class="tx-brand"><span class="tx-mark"><i></i><i></i><i></i><i></i></span>tessera</span><span class="tx-btn tx-primary">Save this page</span></div>
+              <div class="tx-search"><span class="tx-q"><span class="tx-typed">cheese bread recipe from Minas</span></span><span class="tx-clear">×</span></div>
+              <span class="tx-btn tx-ask">Answer based on my bookmarks</span>
+              <ul class="tx-results">
+                <li class="tx-res sel"><img src="../assets/img/sites/wikipedia.webp" alt=""><div><p class="tx-rt">Pão de queijo</p><p class="tx-rm">en.wikipedia.org · 10/1/2026</p><p class="tx-rs">From Wikipedia, the free encyclopedia Pão de queijo Type <mark>Bread</mark> Course Breakfast or snack Place of origin…</p><p class="tx-tags"><span>culinária brasileira</span><span>Pão</span><span>Queijo</span></p></div></li>
+                <li class="tx-res"><img src="../assets/img/sites/wikipedia.webp" alt=""><div><p class="tx-rt">Brigadeiro</p><p class="tx-rm">en.wikipedia.org · 10/1/2026</p><p class="tx-rs">Brigadeiro The brigadeiro, a dessert from Brazil Type Confectionery Place of origin Brazil Cookbook:…</p><p class="tx-tags"><span>sobremesas</span><span>culinária brasileira</span><span>café</span><span>Brigadeiro</span><span>Brazilian Portuguese</span></p></div></li>
+              </ul>
+              <div class="tx-popfoot"><span>Manage bookmarks</span><span>Open side panel</span><span>Settings</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="try" aria-labelledby="exp-title">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <p class="label">Try it</p>
+          <h2 id="exp-title" class="display-l">The four pieces, as in the extension</h2>
+          <p>Each screen below recreates Tessera's real interface, with the bookmarks and results from the video.</p>
+        </header>
+        <div class="demo" data-demo>
+          <div class="demo-bar">
+            <div class="demo-tabs" role="tablist" aria-label="Tessera's pieces">
+            <button class="demo-tab c1" role="tab" id="dt-busca" aria-controls="dp-busca" aria-selected="true"><i></i><span>Search by meaning</span></button>
+            <button class="demo-tab c2" role="tab" id="dt-rel" aria-controls="dp-rel" aria-selected="false" tabindex="-1"><i></i><span>Related</span></button>
+            <button class="demo-tab c3" role="tab" id="dt-ass" aria-controls="dp-ass" aria-selected="false" tabindex="-1"><i></i><span>Topics</span></button>
+            <button class="demo-tab c4" role="tab" id="dt-resp" aria-controls="dp-resp" aria-selected="false" tabindex="-1"><i></i><span>Answers</span></button>
+            </div>
+            <button class="demo-pause" type="button" data-demo-pause>Pause</button>
+          </div>
+
+          <div class="demo-panel" role="tabpanel" tabindex="0" id="dp-busca" aria-labelledby="dt-busca">
+            <div class="demo-copy">
+              <h3>Search the way you remember</h3>
+              <p>Open the popup with <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd> or type <kbd>sf</kbd> + space in the address bar. Results come by meaning, with the matching passage highlighted, even in another language.</p>
+              <p class="demo-note">The browser's search finds nothing for this phrase: it needs every word in the title.</p>
+            </div>
+            <div class="demo-shot demo-shot-pop">
+              <div class="fit" data-fit="400">
+                <div class="tx tx-popup" role="img" aria-label="Tessera popup: the search “cheese bread recipe from Minas” finds Pão de queijo and Brigadeiro">
+                  <div class="tx-pophead"><span class="tx-brand"><span class="tx-mark"><i></i><i></i><i></i><i></i></span>tessera</span><span class="tx-btn tx-primary">Save this page</span></div>
+                  <div class="tx-search"><span class="tx-q"><span class="tx-typed" data-type>cheese bread recipe from Minas</span><span class="tx-caret"></span></span><span class="tx-clear">×</span></div>
+                  <span class="tx-btn tx-ask">Answer based on my bookmarks</span>
+                  <ul class="tx-results">
+                    <li class="tx-res sel" data-step><img src="../assets/img/sites/wikipedia.webp" alt=""><div><p class="tx-rt">Pão de queijo</p><p class="tx-rm">en.wikipedia.org · 10/1/2026</p><p class="tx-rs">From Wikipedia, the free encyclopedia Pão de queijo Type <mark>Bread</mark> Course Breakfast or snack Place of origin…</p><p class="tx-tags"><span>culinária brasileira</span><span>Pão</span><span>Queijo</span></p></div></li>
+                    <li class="tx-res" data-step><img src="../assets/img/sites/wikipedia.webp" alt=""><div><p class="tx-rt">Brigadeiro</p><p class="tx-rm">en.wikipedia.org · 10/1/2026</p><p class="tx-rs">Brigadeiro The brigadeiro, a dessert from Brazil Type Confectionery Place of origin Brazil Cookbook:…</p><p class="tx-tags"><span>sobremesas</span><span>culinária brasileira</span><span>café</span><span>Brigadeiro</span><span>Brazilian Portuguese</span></p></div></li>
+                  </ul>
+                  <div class="tx-popfoot"><span>Manage bookmarks</span><span>Open side panel</span><span>Settings</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-panel" role="tabpanel" tabindex="0" id="dp-rel" aria-labelledby="dt-rel">
+            <div class="demo-copy">
+              <h3>What you already saved shows up on its own</h3>
+              <p>Open the side panel on any site and see, without typing anything, your bookmarks about the same subject. Switch tabs and the list follows.</p>
+              <p class="demo-note">The open page is read only to compare. Nothing is sent.</p>
+            </div>
+            <div class="demo-shot">
+              <div class="fit" data-fit="760" data-fit-sm="400">
+                <div class="tx tx-browser" role="img" aria-label="Tessera's side panel next to the Cloudflare Workers docs, with five related bookmarks">
+                  <div class="tx-page">
+                    <p class="tx-url">developers.cloudflare.com/workers/</p>
+                    <p class="tx-ptitle2">Cloudflare Workers</p>
+                    <span class="tx-line w90"></span><span class="tx-line w75"></span><span class="tx-line w82"></span><span class="tx-line w60"></span><span class="tx-line w88"></span><span class="tx-line w70"></span>
+                  </div>
+                  <div class="tx-side">
+                    <div class="tx-sidehead"><span class="tx-brand"><span class="tx-mark"><i></i><i></i><i></i><i></i></span>tessera</span><span class="tx-links"><span>Manage bookmarks</span><span>Settings</span></span></div>
+                    <div class="tx-search"><span class="tx-ph">Describe what you are looking for…</span></div>
+                    <p class="tx-sectitle">Related to this page</p>
+                    <ul class="tx-results">
+                      <li class="tx-res" data-step><img src="../assets/img/sites/cloudflare.webp" alt=""><div><p class="tx-rt">Overview · Cloudflare Pages docs</p><p class="tx-rm">developers.cloudflare.com · 10/1/2026</p><p class="tx-rs">Home /Pages Create full-stack applications that are instantly deployed to the Cloudflare global network.</p><p class="tx-tags"><span>devops</span><span>Cloudflare Pages</span><span>CloudflareDev</span></p></div></li>
+                      <li class="tx-res" data-step><img src="../assets/img/sites/render.webp" alt=""><div><p class="tx-rt">Docs + Quickstarts | Render</p><p class="tx-rm">render.com · 10/1/2026</p><p class="tx-rs">Node.js Express Puppeteer Next.js Redwood Blitz ElysiaJS Remix Hapi NuxtJS Strapi SvelteKit Fastify…</p><p class="tx-tags"><span>devops</span><span>SvelteKit</span><span>Sidekiq</span></p></div></li>
+                      <li class="tx-res" data-step><img src="../assets/img/sites/vercel.webp" alt=""><div><p class="tx-rt">Deploying to Vercel</p><p class="tx-rm">vercel.com · 10/1/2026</p><p class="tx-rs">Vercel detects your framework and builds it, or deploys your files as-is when there's no framework.</p><p class="tx-tags"><span>devops</span><span>front-end</span><span>Vercel CLI</span><span>Deployments</span></p></div></li>
+                      <li class="tx-res" data-step><img src="../assets/img/sites/hashicorp.webp" alt=""><div><p class="tx-rt">What is Terraform</p><p class="tx-rm">developer.hashicorp.com · 10/1/2026</p><p class="tx-rs">Manage any infrastructure Find providers for many of the platforms and services you already use in the…</p><p class="tx-tags"><span>infraestrutura como código</span><span>devops</span><span>Terraform</span><span>HashiCorp</span></p></div></li>
+                      <li class="tx-res" data-step><img src="../assets/img/sites/fly.webp" alt=""><div><p class="tx-rt">Fly.io developer documentation</p><p class="tx-rm">docs.fly.io · 10/1/2026</p><p class="tx-rs">Check out the installation guide Step 2: Run fly launch Explore Fly.io by features Fly Machines Fly Volumes…</p></div></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-panel" role="tabpanel" tabindex="0" id="dp-ass" aria-labelledby="dt-ass">
+            <div class="demo-copy">
+              <h3>Topics that emerge from your bookmarks</h3>
+              <p>There is no predefined category list. Tessera groups what your bookmarks have in common and takes the name from the members themselves.</p>
+              <p class="demo-note">Create your own topics, use “Similar” to fill them in and open a whole topic in tabs.</p>
+            </div>
+            <div class="demo-shot">
+              <div class="fit" data-fit="1280" data-fit-sm="520" data-clone="fit-topics"></div>
+            </div>
+          </div>
+
+          <div class="demo-panel" role="tabpanel" tabindex="0" id="dp-resp" aria-labelledby="dt-resp">
+            <div class="demo-copy">
+              <h3>Ask, and get the answer with its sources</h3>
+              <p>Optional, with your own key for an AI service (Anthropic, OpenAI, DeepSeek, Ollama or compatible). The answer cites the bookmark it used and, without enough basis, says it found nothing.</p>
+              <p class="demo-note">You authorize each purpose and set a monthly spending limit.</p>
+            </div>
+            <div class="demo-shot">
+              <div class="fit" data-fit="1280" data-fit-sm="480">
+                <div class="tx tx-screen tx-lib" role="img" aria-label="Tessera's Library answering “investment funds and interest rates” with citations of Compound interest and Investment fund">
+                  <div class="tx-nav">
+                    <span class="tx-brand big"><span class="tx-mark"><i></i><i></i><i></i><i></i></span>tessera</span>
+                    <span class="tx-navlbl">Search by meaning</span>
+                    <span class="tx-input"><span class="tx-typed" data-type>investment funds and interest rates</span><span class="tx-caret"></span></span>
+                    <span class="tx-ni on"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h16"/></svg>Library<em>31</em></span>
+                    <span class="tx-ni"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg>Topics</span>
+                    <span class="tx-ni"><svg viewBox="0 0 24 24"><path d="M9 15l6-6M7 11l-2 2a4 4 0 0 0 6 6l2-2M17 13l2-2a4 4 0 0 0-6-6l-2 2"/></svg>Broken links<em>0</em></span>
+                    <span class="tx-ni"><svg viewBox="0 0 24 24"><path d="M5 7h14M10 7V5h4v2M7 7l1 12h8l1-12"/></svg>Trash<em>0</em></span>
+                  <span class="tx-ni tx-navfoot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/></svg>Settings</span></div>
+                  <div class="tx-main">
+                    <div class="tx-head"><p class="tx-title">Library</p><span class="tx-btn">Import from browser</span></div>
+                    <div class="tx-filters"><span class="wide">All topics</span><span>All tags</span><span>All collections</span></div>
+                    <div class="tx-filters"><span>All sites</span><em>From</em><span class="date">mm/dd/yyyy</span><em>to</em><span class="date">mm/dd/yyyy</span></div>
+                    <p class="tx-answer" data-step>In your bookmarks, start with Compound interest [<u>1</u>] and compare it with Investment fund [<u>2</u>]: both explain where to put your money, how much it yields and what the risks are.</p>
+                    <div class="tx-sources" data-step><p>Bookmarks sent as sources</p><ol><li>Compound interest</li><li>Investment fund</li><li>Government bond</li></ol></div>
+                    <div class="tx-libcols"><div>
+                    <p class="tx-count2"><i class="tx-cb"></i>4 bookmarks</p>
+                    <ul class="tx-list" data-step>
+                      <li><i class="tx-cb"></i><img src="../assets/img/sites/wikipedia.webp" alt=""><div><p class="tx-rt">Compound interest</p><p class="tx-rm">en.wikipedia.org · 10/1/2026 · Finanças</p><p class="tx-tags"><span>crédito e dívidas</span><span>Compound Interest</span><span>Interest Formula</span></p></div></li>
+                      <li><i class="tx-cb"></i><img src="../assets/img/sites/wikipedia.webp" alt=""><div><p class="tx-rt">Investment fund</p><p class="tx-rm">en.wikipedia.org · 10/1/2026 · Finanças</p><p class="tx-tags"><span>investimentos</span><span>Investment Fund</span><span>Collective Investment</span></p></div></li>
+                      <li><i class="tx-cb"></i><img src="../assets/img/sites/wikipedia.webp" alt=""><div><p class="tx-rt">Government bond</p><p class="tx-rm">en.wikipedia.org · 10/1/2026 · Finanças</p><p class="tx-tags"><span>investimentos</span><span>crédito e dívidas</span><span>Inflation-Protected Securities</span><span>UK Debt</span></p></div></li>
+                      <li><i class="tx-cb"></i><img src="../assets/img/sites/kubernetes.webp" alt=""><div><p class="tx-rt">Deployments</p><p class="tx-rm">kubernetes.io · 10/1/2026 · Infraestrutura e DevOps</p><p class="tx-tags"><span>kubernetes</span><span>ReplicaSet</span><span>Deployments</span></p></div></li>
+                    </ul>
+                    </div><p class="tx-detail">Select a bookmark to view and edit.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section video-section" id="video" aria-labelledby="video-title">
       <div class="wrap">
-        <div class="section-head">
-          <h2 id="video-title">See Tessera in action</h2>
+        <header class="section-head" data-reveal>
+          <p class="label">In motion</p>
+          <h2 id="video-title" class="display-l">See it all in 37 seconds</h2>
           <p>Recorded with the real extension: the AI model, the pages and the results are real.</p>
-        </div>
-        <div class="video" data-video="DOut4kBqAAk" data-hl="en" data-title="Tessera intro video">
-          <button class="video-play" type="button" aria-label="Watch the Tessera intro video, with narration and captions">
+        </header>
+        <div class="video" data-video="DOut4kBqAAk" data-hl="en" data-title="Tessera introduction video" data-reveal>
+          <button class="video-play" type="button" aria-label="Watch the Tessera introduction video, with narration and captions">
             <img src="../assets/img/en/video-poster.webp" width="1920" height="1080" loading="lazy" alt="">
             <span class="play-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
             <span class="video-meta">0:37 · narration and captions</span>
@@ -89,180 +290,118 @@
       </div>
     </section>
 
-    <section class="section" id="features" aria-labelledby="tour-title">
+    <section class="section" aria-labelledby="more-title">
       <div class="wrap">
-        <div class="section-head">
-          <h2 id="tour-title">Your library working while you browse</h2>
-          <p>The AI model runs in your browser and understands what each page is about. Here is how that shows up day to day.</p>
-        </div>
-
-        <div class="tour" data-tour>
-          <div class="tour-tabs" role="tablist" aria-label="Tessera features">
-            <button class="tour-tab" role="tab" id="tab-rel" aria-controls="panel-rel" aria-selected="true"><span class="dot c2"></span>Related</button>
-            <button class="tour-tab" role="tab" id="tab-search" aria-controls="panel-search" aria-selected="false" tabindex="-1"><span class="dot c3"></span>Search by meaning</button>
-            <button class="tour-tab" role="tab" id="tab-topics" aria-controls="panel-topics" aria-selected="false" tabindex="-1"><span class="dot c1"></span>Topics</button>
-            <button class="tour-tab" role="tab" id="tab-answers" aria-controls="panel-answers" aria-selected="false" tabindex="-1"><span class="dot c4"></span>Answers with citations</button>
-            <button class="tour-tab" role="tab" id="tab-look" aria-controls="panel-look" aria-selected="false" tabindex="-1"><span class="dot c2"></span>Appearances</button>
-          </div>
-
-          <div class="tour-panel" role="tabpanel" id="panel-rel" aria-labelledby="tab-rel">
-            <div>
-              <h3>Related to the open page</h3>
-              <p>Open the side panel on any site and see, without typing anything, your bookmarks about the same subject.
-                Switch tabs and the list follows.</p>
-              <ul>
-                <li>Reading a service's docs, the guides and alternatives you had already saved show up.</li>
-                <li>The open page is read only to compare — nothing is sent.</li>
-              </ul>
-            </div>
-            <figure class="shot m0"><img src="../assets/img/en/01-relacionados.png" width="1280" height="800" loading="lazy" alt="Side panel with bookmarks related to the open page"></figure>
-          </div>
-
-          <div class="tour-panel" role="tabpanel" id="panel-search" aria-labelledby="tab-search" hidden>
-            <div>
-              <h3>Search the way you remember</h3>
-              <p>“How to publish a site without a server”, “short home workout”. Results come by meaning, with the matching
-                excerpt highlighted — even when the page uses other words or another language.</p>
-              <ul>
-                <li>Popup with <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>, address bar with <kbd>sf</kbd> + space, side
-                  panel and Library.</li>
-                <li>Filters by tag, collection, site, date and topic.</li>
-              </ul>
-            </div>
-            <figure class="shot m0"><img src="../assets/img/en/02-busca-pelo-sentido.png" width="1280" height="800" loading="lazy" alt="Tessera popup searching for a recipe"></figure>
-          </div>
-
-          <div class="tour-panel" role="tabpanel" id="panel-topics" aria-labelledby="tab-topics" hidden>
-            <div>
-              <h3>Topics that emerge from your bookmarks</h3>
-              <p>No predefined category list: Tessera groups bookmarks by what they have in common, and names come from the
-                members themselves.</p>
-              <ul>
-                <li>Create your own topics — they keep their name when everything is recalculated.</li>
-                <li>“Looks like” suggests where to place what has no topic; “Similar” shows what to add.</li>
-                <li>Open all bookmarks of a topic in tabs, in one click.</li>
-              </ul>
-            </div>
-            <figure class="shot m0"><img src="../assets/img/en/04-assuntos.png" width="1280" height="800" loading="lazy" alt="Topics screen in the Visual appearance, with a topic's panel open"></figure>
-          </div>
-
-          <div class="tour-panel" role="tabpanel" id="panel-answers" aria-labelledby="tab-answers" hidden>
-            <div>
-              <h3>Answers based on your bookmarks</h3>
-              <p>Optional, with your own key for an AI service (Anthropic, OpenAI, DeepSeek, Ollama or compatible). The answer
-                comes with <strong>[1]</strong> citations that open the bookmark used — and, without enough basis, it says so.</p>
-              <ul>
-                <li>You allow each purpose and see where data goes and what is sent.</li>
-                <li>Monthly spending limit; revoke at any time.</li>
-              </ul>
-            </div>
-            <figure class="shot m0"><img src="../assets/img/en/03-resposta-com-citacoes.png" width="1280" height="800" loading="lazy" alt="Library with an answer citing bookmarks"></figure>
-          </div>
-
-          <div class="tour-panel" role="tabpanel" id="panel-look" aria-labelledby="tab-look" hidden>
-            <div>
-              <h3>Your way</h3>
-              <p>Three appearances — <strong>Calm</strong> (space and reading), <strong>Dense</strong> (many bookmarks per
-                screen) and <strong>Visual</strong> (tiles in the topic color) — in light, dark or following the system.
-                English and Portuguese.</p>
-            </div>
-            <figure class="shot m0"><img src="../assets/img/en/05-densa-escura.png" width="1280" height="800" loading="lazy" alt="Library in the Dense appearance, dark mode"></figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section band" aria-labelledby="more-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="more-title">And everything a good library needs</h2>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <div class="tile c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
+        <header class="section-head" data-reveal>
+          <p class="label">And more</p>
+          <h2 id="more-title" class="display-l">Everything a good library needs</h2>
+        </header>
+        <div class="bento">
+          <article class="cell cell-org" data-reveal>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>
             <h3>Organizes itself</h3>
-            <p>Every bookmark gets subject tags, a summary and a suggested collection — without you filling anything in.</p>
+            <p>Every bookmark gets subject tags, a summary and a suggested collection. You don't fill anything in.</p>
+            <p class="tag-demo"><span class="src">Pão de queijo</span><span class="tag">culinária brasileira</span><span class="tag">Pão</span><span class="tag">Queijo</span></p>
           </article>
-          <article class="card">
-            <div class="tile c2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></div>
-            <h3>Brings the bookmarks you already have</h3>
+          <article class="cell cell-imp" data-reveal>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></span>
+            <h3>Brings what you already have</h3>
             <p>Import your Chrome or Edge bookmarks in one click. The browser's original tree is never modified.</p>
           </article>
-          <article class="card">
-            <div class="tile c3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div>
-            <h3>Suggestions (optional)</h3>
+          <article class="cell cell-keys" data-reveal>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></span>
+            <h3>Shortcuts</h3>
+            <dl class="keys">
+              <div><dt><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></dt><dd>saves the page</dd></div>
+              <div><dt><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd></dt><dd>opens search</dd></div>
+              <div><dt><kbd>sf</kbd> + space</dt><dd>searches from the address bar</dd></div>
+            </dl>
+          </article>
+          <article class="cell cell-look" data-reveal>
+            <div class="cell-text">
+              <h3>Your way</h3>
+              <p>Three appearances: <strong>Calm</strong> (space and reading), <strong>Dense</strong> (many bookmarks per screen)
+                and <strong>Visual</strong> (tiles in the topic color). In light, dark or following the system, in English and Portuguese.</p>
+            </div>
+            <figure class="cell-shot"><img src="../assets/img/en/aparencias.webp" width="1280" height="800" loading="lazy" alt="Library in the Dense appearance, dark mode"></figure>
+          </article>
+          <article class="cell cell-sug" data-reveal>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>
+            <h3>Suggestions</h3>
+            <p class="opt-line">Optional</p>
             <p>A discreet “+” tells you when a page you keep visiting deserves to be saved. Only counters, without the address.</p>
           </article>
-          <article class="card">
-            <div class="tile c4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg></div>
-            <h3>History in search (optional)</h3>
-            <p>Pages visited in the last 90 days show up marked in search, with “Save” in one click. Turning it off deletes everything.</p>
+          <article class="cell cell-his" data-reveal>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg></span>
+            <h3>History in search</h3>
+            <p class="opt-line">Optional</p>
+            <p>Pages from the last 90 days show up marked in search, with “Save” in one click. Turning it off deletes everything.</p>
           </article>
-          <article class="card">
-            <div class="tile c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></div>
+          <article class="cell cell-lnk" data-reveal>
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
             <h3>Broken links and trash</h3>
             <p>Check your bookmarks and see why each one failed. 30-day trash; export and import everything as JSON.</p>
           </article>
-          <article class="card">
-            <div class="tile c2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></div>
-            <h3>Shortcuts</h3>
-            <p><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> saves the page, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd> opens
-              search and <kbd>sf</kbd> in the address bar searches right away.</p>
-          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="start-title">
+    <section class="section privacy" id="privacy" aria-labelledby="priv-title">
       <div class="wrap">
-        <div class="section-head">
-          <h2 id="start-title">Get started in three steps</h2>
-          <p>No sign-up. The guide shows every screen in detail.</p>
-        </div>
-        <ol class="steps">
-          <li><strong>Install and pin the icon</strong><span>From the Chrome Web Store or Edge Add-ons.</span></li>
-          <li><strong>Let the model download once</strong><span>About 200 MB, on first launch. After that it runs on your computer.</span></li>
-          <li><strong>Import your bookmarks</strong><span>Library → Import. Within minutes, search by meaning works.</span></li>
-        </ol>
-        <p class="mt"><a class="btn btn-ghost" href="guide/">Open the full guide</a></p>
-      </div>
-    </section>
-
-    <section class="section band" id="privacy" aria-labelledby="priv-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="priv-title">Real privacy</h2>
-          <p>There is no Tessera server. Your data doesn't go through us because there is no “us” in the way.</p>
-        </div>
-        <div class="split">
-          <div class="card">
-            <h3>Stays on your computer</h3>
+        <header class="section-head" data-reveal>
+          <p class="label">Privacy</p>
+          <h2 id="priv-title" class="display-l">There is no “us” in the way</h2>
+          <p>Tessera has no server. Your data doesn't pass through anyone because there is nowhere for it to go.</p>
+        </header>
+        <div class="boundary" data-reveal>
+          <div class="inside">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>Stays on your computer</h3>
             <ul>
               <li>Your bookmarks, page text and organization.</li>
               <li>The AI model, which runs in the browser.</li>
               <li>Your AI service key, if you use one.</li>
-              <li>No account, no ads, no analytics, no telemetry.</li>
             </ul>
           </div>
-          <div class="card">
+          <div class="outside">
             <h3>Leaves only when you ask</h3>
             <ul>
-              <li>The pages you saved, to read their content.</li>
-              <li>The AI model, downloaded once.</li>
+              <li>Reading the pages you saved.</li>
+              <li>Downloading the AI model, once.</li>
               <li>Link checks, when you ask.</li>
               <li>The AI service <em>you</em> configured, only for the purposes you allowed. Banking and health sites are never sent.</li>
             </ul>
           </div>
         </div>
-        <p class="mt"><a href="privacy/">Read the full privacy policy</a></p>
+        <p class="privacy-foot">No account, no ads, no analytics, no telemetry. <a href="privacy/">Read the full privacy policy</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="start" aria-labelledby="start-title">
+      <div class="wrap">
+        <header class="section-head" data-reveal>
+          <p class="label">Get started</p>
+          <h2 id="start-title" class="display-l">Ready in three steps</h2>
+          <p>No sign-up. The guide shows every screen in detail.</p>
+        </header>
+        <ol class="steps">
+          <li data-reveal><strong>Install and pin the icon</strong><span>From the Chrome Web Store. Edge coming soon.</span></li>
+          <li data-reveal><strong>Let the model download once</strong><span>About 200 MB, on first launch. After that, everything runs on your computer.</span></li>
+          <li data-reveal><strong>Import your bookmarks</strong><span>Library → Import. Within minutes, search by meaning works.</span></li>
+        </ol>
+        <div class="cta" data-reveal>
+          <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/chaphnhnfeidmgclakdmckdgfohoochd">Add to Chrome<span class="btn-note">free</span></a>
+          <a class="btn btn-ghost btn-lg" href="guide/">Open the full guide</a>
+        </div>
       </div>
     </section>
 
     <section class="section" id="faq" aria-labelledby="faq-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="faq-title">Frequently asked questions</h2>
-        </div>
+      <div class="wrap faq-layout">
+        <header class="section-head faq-head" data-reveal>
+          <p class="label">Questions</p>
+          <h2 id="faq-title" class="display-l">Frequently asked questions</h2>
+          <p>Didn't find yours? The <a href="guide/">guide</a> explains every screen in detail.</p>
+        </header>
         <div class="faq">
           <details>
             <summary>Is Tessera free?</summary>
@@ -301,13 +440,15 @@
       </div>
     </section>
 
-    <section class="closing band">
+    <section class="closing" aria-labelledby="closing-title">
       <div class="wrap">
-        <div class="mosaic" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <h2>Every link, a piece of the mosaic</h2>
-        <p class="fineprint">Free for Chrome · coming soon to Edge.</p>
-        <div class="cta">
-          <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/chaphnhnfeidmgclakdmckdgfohoochd">Add to Chrome</a> <a class="btn btn-ghost" href="guide/">See how it works</a>
+        <p class="wordmark" aria-hidden="true"><span class="mark"><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i></span>tessera</p>
+        <div class="hero-row">
+          <h2 id="closing-title" class="display-l">Every link, a piece of the mosaic.</h2>
+          <div class="cta">
+            <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/chaphnhnfeidmgclakdmckdgfohoochd">Add to Chrome<span class="btn-note">free</span></a>
+            <a class="btn btn-ghost btn-lg" href="guide/">Open the guide</a>
+          </div>
         </div>
       </div>
     </section>
